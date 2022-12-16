@@ -14,7 +14,7 @@ class Talking:
         self.count_n = count_n
 
     def to_answer(self):
-        return f"Имя котёнка {self.name} и он(а) произносит"
+        return f"Имя котёнка {self.name}"
 
     def number_yes(self):
         self.count_y += 1
@@ -22,12 +22,12 @@ class Talking:
 
     def number_no(self):
         self.count_n += 1
-        return f"{cat.name} произносит - {list_1[0]}: {self.count_n} раз"
+        return f"{cat.name} произносит - {list_1[1]}: {self.count_n} раз"
 
 
 list_1 = ["moore - moore", "meow - meow"]
 cat = Talking("Пушок")
-print(f"Нашего котика зовут {cat.name} у него сегодня хорошее настроение и он делает следующте вещи:")
+print(f"{cat.to_answer()} у него сегодня хорошее настроение и он делает следующте вещи:")
 time.sleep(3)
 print(cat.number_yes())
 time.sleep(2)
